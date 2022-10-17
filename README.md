@@ -1,1 +1,1 @@
-# dio-desafio-netflix
+Recriando a interface da Netflix (desafio DIO).
