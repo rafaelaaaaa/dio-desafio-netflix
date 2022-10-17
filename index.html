@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/owl.theme.default.min.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Netflix</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-itens body-margem">   
+                <a href="index.html" class="link-inicio">
+                        <img class="logo-inicio" src="img/netflix-logo.png" alt="logo">
+                </a>
+
+                <nav class="menu-esquerda">
+                    <a href="index.html" class="menu-ativo">Início</a>
+                    <a href="em-construcao.html">Séries</a>
+                    <a href="em-construcao.html">Filmes</a>
+                    <a href="em-construcao.html">Bombando</a>
+                    <a href="em-construcao.html">Minha lista</a>
+                </nav>
+
+                <div class="menu-direita">
+                    <button onmouseover="showNotificacao()"><i class="fa-sharp fa-solid fa-bell"></i></button>
+                    <div class="notificacao" id="notificacao">
+                        <div class="notificacao-content">
+                            <p onmouseout="hideNotificacao()">Nenhuma novidade recente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destaque">
+                <div class="body-margem">
+                    <img class="logo-destaque" src="img/dez-coisas-logo.png" alt="título-filme">
+                </div>
+
+                <div class="sinopse-destaque">
+                    <p>Em seu primeiro dia na nova escola, Cameron se apaixona por Bianca. Mas ela só poderá sair com rapazes até que Kat, sua irmã mais velha, arrume um namorado.</p>
+                </div>
+            </div>
+
+            <div class="body-margem botoes-destaque">
+                <button onclick="showTrailer()" class="botao-assistir">
+                    <i class="fa-solid fa-play"></i>
+                    Trailer
+                </button>
+
+                <div class="trailer" id="trailer">
+                    <div class="trailer-content">
+                        <span onclick="hideTrailer()">&times;</span>
+                        <div>
+                            <iframe class="video" src="https://www.youtube.com/embed/tD76OqlJRwQ?controls=0&start=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="showModal()" class="botao-informacoes">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Mais informações
+                </button>
+
+                <div class="informacoes" id="informacoes">
+                    <div class="informacoes-content">
+                        <span onclick="hideModal()">&times;</span>
+                        <img class="infos-img" src="img/dez-coisas-logo.png" alt="cena do filme">
+                        <p class="infos-filme">1999 | 1h37m | Classificação: 12 anos</p>
+                        <p class="infos-sinopse">Em seu primeiro dia na nova escola, Cameron se apaixona por Bianca. Mas ela só poderá sair com rapazes até que Kat, sua irmã mais velha, arrume um namorado. O problema é que ela é insuportável. Cameron, então, negocia com o único garoto que talvez consiga sair com Kat – um misterioso bad-boy com uma péssima reputação.</p>
+                        <p class="infos-elenco">Elenco: Heath Ledger, Julia Stiles e Joseph Gordon-Levitt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="body-margem">
+            <span class="titulo-categorias">Em Alta</span>
+
+            <div class="carrossel">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="img/min1.jpg" alt="">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/min2.jpg" alt="">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/min3.jpg" alt="">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/min4.jpg" alt="">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/min5.jpg" alt="">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/min6.jpg" alt="">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/min7.jpg" alt="">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/min8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer body-margem">
+            <div class="redes-sociais">
+                <a target="_blank" href="https://www.facebook.com/netflixbrasil"><i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.instagram.com/NetflixBrasil/"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://twitter.com/NetflixBrasil"><i class="fa-brands fa-twitter"></i></a>
+                <a target="_blank" href="https://www.youtube.com/user/NetflixBRA"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+    
+            <div class="links-rodapé">
+                <a href="em-construcao.html">Central de Ajuda</a>
+                <a href="em-construcao.html">Entre em contato</a>
+                <a href="em-construcao.html">Privacidade</a>
+                <a href="em-construcao.html">Avisos Legais</a>
+            </div>
+
+            <div>
+                <p class="copyright">&copy; 1997-2022 Netflix, Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/13e6f693e0.js" crossorigin="anonymous"></script>
+    <script src="owl/jquery.min.js"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+    <script src="setup.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

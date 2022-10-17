@@ -1,0 +1,490 @@
+:root {
+    --preto: #141414;
+    --branco: white;
+    --cinza: #e5e5e5;
+    --vermelho: #e50914;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'); */
+
+
+body {
+    background-color: var(--preto);
+    width: 100%;
+    height: 100%;
+}
+
+.body-margem {
+    margin: 0 55px;
+}
+
+
+
+/* Estilos - Header/cabeçalho */
+
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.205), rgb(20, 20, 20)), url(img/dez-coisas-bg2.jpg);
+    background-size: cover;
+    width: 100%;
+    padding-top: 1.5%;
+    padding-bottom: 6%;
+}
+
+.header-itens {
+    display: flex;
+    align-items: center;
+}
+
+.link-inicio {
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.logo-inicio {
+    width: 100px;
+    min-width: 70px;
+}
+
+.menu-esquerda {
+    min-width: 100px;
+    padding-left: 36px;
+}
+
+.menu-esquerda a {
+    text-decoration: none;
+    color: var(--cinza);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding-right: 16px;
+    transition: 0.3s;
+}
+
+.menu-ativo {
+    font-weight: 600;
+} 
+
+.menu-esquerda a:hover {
+    color: #818181;
+}
+
+.menu-direita {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    right: 4%;
+    top: 4%;
+}
+
+.menu-direita button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+.notificacao {
+    transform: scale(1.0);
+    width: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.notificacao-content {
+    width: 200px;
+    height: auto;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(95, 95, 95, 0.795);
+    border-radius: 4px;
+    color: var(--cinza);
+    padding: 20px;
+    margin-top: 10px;
+} 
+
+.notificacao-content p {
+    font-size: 12px;
+    font-weight: bolder;
+    line-height: 15px;
+    text-align: center;
+}
+
+.show-notificacao {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+}
+
+
+
+/* Estilos - Sessão destaque */
+
+.destaque {
+    margin-top: 130px;
+}
+
+.logo-destaque {
+    max-width: 320px;
+    min-width: 80px;
+}
+
+.sinopse-destaque {
+    font-family: 'Montserrat Medium', sans-serif;
+    line-height: 20px;
+    color: var(--cinza);
+    font-size: 16px;
+    width: 530px;
+    margin: 20px 0 20px 55px;
+}
+
+.botoes-destaque {
+    display: flex;
+    align-items: center;
+}
+
+.botoes-destaque i {
+    font-size: 23px;
+    margin-right: 10px;
+}
+
+.botao-assistir {
+    background: rgba(255, 255, 255, 0.877);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: var(--preto);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.6rem 2rem;
+    margin-right: 0.6rem;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    transition: 0.12s;
+}
+
+.botao-assistir a {
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.botao-informacoes {
+    background: rgba(255, 255, 255, 0.219);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.6rem 2rem;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    transition: 0.12s;
+}
+
+.botao-assistir:hover {
+    background: rgba(221, 221, 221, 0.877);
+}
+
+.botao-informacoes:hover {
+    background: rgba(255, 255, 255, 0.11);
+}
+
+.informacoes,
+.trailer {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.658);
+    transform: scale(1.0);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.informacoes-content {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(20, 20, 20, 0.301), rgb(20, 20, 20), rgb(20, 20, 20)), url(img/dez-coisas-bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: auto;
+    margin: 60px;
+    color: var(--cinza);
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 20px 20px 40px;
+    border-radius: 3px;
+}
+
+.trailer-content {
+    background: rgb(20, 20, 20);
+    width: 650px;
+    height: auto;
+    margin: 60px;
+    color: var(--cinza);
+    font-family: 'Montserrat', sans-serif;
+    padding: 25px;
+    border-radius: 3px;
+}
+
+.informacoes-content span,
+.trailer-content span {
+    float: right;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.informacoes-content span:hover,
+.trailer-content span:hover {
+    color: gray;
+}
+
+.infos-img {
+    width: 180px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.infos-filme,
+.infos-elenco {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #aaaaaa;
+}
+
+.infos-sinopse {
+    font-size: 14px;
+    margin: 30px 0;
+    width: 500px;
+}
+
+.show-informacoes,
+.show-trailer {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+}
+
+.video {
+    width: 560px;
+    height: 315px;
+}
+
+
+/* Estilos - sessão categorias */
+
+.titulo-categorias {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--cinza);
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    margin: 15px 5px 15px 0;
+}
+
+.item img {
+    transition: 0.2s;
+}
+
+.item img:hover {
+    opacity: 0.7;
+}
+
+
+
+/* Estilos - footer */
+
+.footer {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.redes-sociais i {
+    text-decoration: none;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 20px;
+}
+
+.links-rodapé a {
+    text-decoration: none;
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    margin-right: 30px;
+    transition: 0.2s;
+}
+
+.links-rodapé a:hover {
+    text-decoration: underline;
+}
+
+
+.copyright {
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    margin-top: 30px;
+}
+
+
+
+/* Página em construção */
+
+.header-construcao {
+    width: 100%;
+    height: 150px;
+    padding-top: 1.5%;
+    padding-bottom: 6%;
+}
+
+.em-construcao {
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+
+
+/*  Media queries */
+
+@media screen and (max-width: 750px) {   
+    .header-itens {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+    }
+
+    .menu-esquerda {
+        margin: 20px 15px 15px 0;
+        padding: 0;
+    }
+
+    .menu-esquerda a {
+        font-size: 12px;
+    }
+
+    .sinopse-destaque {
+        max-width: 350px;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    .notificacao-content {
+        width: 160px;
+        height: 10px;
+        padding: 15px;
+        margin-top: 7px;
+    }
+
+    .informacoes,
+    .trailer {
+        background-color: rgba(0, 0, 0, 0.726);
+        align-items: flex-start;
+        justify-content: center;
+        position: absolute;
+        margin-bottom: 150px;
+    }
+    
+    .informacoes-content {
+        background: linear-gradient(rgba(0, 0, 0, 0.158),rgba(20, 20, 20, 0.212)), rgba(20, 20, 20, 0.521), rgb(20, 20, 20), url(img/dez-coisas-bg.jpg);
+        background-size: cover;
+        background-position: center top;
+        width: 330px;
+        height: auto;
+        margin: 60px;
+    }
+
+    .infos-img {
+        max-width: 150px;
+        margin-top: 120px;
+    }
+    
+    .infos-filme,
+    .infos-elenco {
+        font-size: 11px;
+    }
+    
+    .infos-sinopse {
+        font-size: 13px;
+        margin: 30px 0;
+        max-width: 300px;
+    }
+    
+    .trailer-content {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: auto;
+        margin: 50px;
+        padding: 25px;
+        align-items: flex-end;
+    }
+
+    .video {
+        width: 350px;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .sinopse-destaque {
+        max-width: 310px;
+    }
+    
+    .botoes-destaque {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .botao-assistir,
+    .botao-informacoes {
+        width: 250px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .logo-destaque {
+        width: 45%;
+        min-width: 25%;
+    }
+
+    .links-rodapé {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links-rodapé a {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .video {
+        width: 300px;
+        height: auto;
+    }
+}
